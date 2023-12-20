@@ -9,6 +9,8 @@ import ArgumentParser
 @main
 struct EasyRegex: ParsableCommand {
     mutating func run() throws {
-        print("Hello, world!")
+        let str = "1234sdas<aabbcc>#@asr"
+        let matched = str.regex(pattern: "<.+>")
+        print(matched)
     }
 }
